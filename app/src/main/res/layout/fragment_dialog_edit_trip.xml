@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogEditTrip">
+
+    <EditText
+        android:id="@+id/end_DialogEditText"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogEnd_TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dialogEnd_TextView"
+        app:layout_constraintTop_toTopOf="@+id/dialogEnd_TextView" />
+
+    <Button
+        android:id="@+id/btnDialogCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogType_TextView" />
+
+    <Button
+        android:id="@+id/btnDialogOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDialogCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDialogCancel" />
+
+    <TextView
+        android:id="@+id/dialogDate_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Date:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialogTime_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Time:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/date_DialogEditText"
+        app:layout_constraintStart_toEndOf="@+id/date_DialogEditText"
+        app:layout_constraintTop_toTopOf="@+id/date_DialogEditText" />
+
+    <TextView
+        android:id="@+id/dialogStart_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Odo Start:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogDate_TextView" />
+
+    <TextView
+        android:id="@+id/dialogEnd_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Odo End:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/start_DialogEditText"
+        app:layout_constraintStart_toEndOf="@+id/start_DialogEditText"
+        app:layout_constraintTop_toTopOf="@+id/start_DialogEditText" />
+
+    <Button
+        android:id="@+id/btnDialogDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDialogCancel"
+        app:layout_constraintEnd_toStartOf="@+id/btnDialogOk"
+        app:layout_constraintStart_toEndOf="@+id/btnDialogCancel"
+        app:layout_constraintTop_toTopOf="@+id/btnDialogCancel" />
+
+    <EditText
+        android:id="@+id/start_DialogEditText"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogStart_TextView"
+        app:layout_constraintStart_toEndOf="@+id/dialogStart_TextView"
+        app:layout_constraintTop_toTopOf="@+id/dialogStart_TextView" />
+
+    <TextView
+        android:id="@+id/dialogType_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Trip Type:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogStart_TextView" />
+
+    <EditText
+        android:id="@+id/type_DialogEditText"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="PERSONAL or UBER"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogType_TextView"
+        app:layout_constraintStart_toEndOf="@+id/dialogType_TextView"
+        app:layout_constraintTop_toTopOf="@+id/dialogType_TextView" />
+
+    <EditText
+        android:id="@+id/date_DialogEditText"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="DD/MM/YYYY"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogDate_TextView"
+        app:layout_constraintStart_toEndOf="@+id/dialogDate_TextView"
+        app:layout_constraintTop_toTopOf="@+id/dialogDate_TextView" />
+
+    <EditText
+        android:id="@+id/time_DialogEditText"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="16:00"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogTime_TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dialogTime_TextView"
+        app:layout_constraintTop_toTopOf="@+id/dialogTime_TextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
